@@ -1,2 +1,2 @@
 # Util
-Utilities for and starter projects.
+Utilities and starter projects.
