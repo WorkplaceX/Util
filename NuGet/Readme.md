@@ -7,7 +7,7 @@ In the (*.csproj) add the following three lines of code. It adds MyContent folde
 <ItemGroup>
   <None Include="MyContent\**" Pack="true" />
 </ItemGroup>
-```xml
+```
 
 ![Add content folder to NuGet](Doc/NuGetPackage.png)
 
@@ -19,6 +19,7 @@ To verify falies are packet into NuGet as expected rename any (*.nupkg) file to 
 In the consuming application add the (*.nupkg) file. This alone however is not enough. Unlike npm for NuGet the consumer explicitly has to unlock the content files. In our example the MyContent folder.
 * First set Generate Path Property of the referenced package to Yes
 * Second add the following three lines to the consuming (*.csproj) file
+
 ```xml
 <ItemGroup>
   <None Include="$(PkgClassLibrary)\content\**">
@@ -31,4 +32,4 @@ In the consuming application add the (*.nupkg) file. This alone however is not e
 
 After building the application the content folder MyContent is in the destination build output folder bin\Debug
 
-![Consuming application with content folder from NuGet package in build output folder](Doc/BuildOutput)
+![Consuming application with content folder from NuGet package in build output folder](Doc/BuildOutput.png)
