@@ -12,7 +12,7 @@ In the (*.csproj) add the following three lines of code. It adds MyContent folde
 ![Add content folder to NuGet](Doc/NuGetPackage.png)
 
 ## How does NuGet internally store files?
-To verify falies are packet into NuGet as expected rename any (*.nupkg) file to (*.nupkg.zip) and open it.
+To verify files are packet into NuGet as expected rename any (*.nupkg) file to (*.nupkg.zip) and open it.
 ![Unzip NuGet package](Doc/NuGetZip.png)
 
 ## Unlock Content Files (*.html; *.css) in Consuming Application
