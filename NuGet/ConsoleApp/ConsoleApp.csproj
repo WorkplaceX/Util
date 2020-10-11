@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,15 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ClassLibrary" Version="1.0.1">
-      <GeneratePathProperty>true</GeneratePathProperty>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="$(PkgClassLibrary)\content\**">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <PackageReference Include="ClassLibrary" Version="1.0.3" />
   </ItemGroup>
 
 </Project>
