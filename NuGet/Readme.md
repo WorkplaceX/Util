@@ -30,6 +30,6 @@ To verify files are packet into NuGet as expected rename any (&ast;.nupkg) file 
 ![Unzip NuGet package](Doc/NuGetZip.png)
 
 ## Add and Build Package in Consuming Application
-In the consuming application add the (&ast;.nupkg) file and build it.
+In the consuming application add the (&ast;.nupkg) file and build it. MyContent folder is copied from package to solution.
 
 ![Consuming application with content folder from NuGet package in build output folder](Doc/BuildOutput.png)
