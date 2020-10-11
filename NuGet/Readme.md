@@ -1,4 +1,4 @@
-# Add and Consume Content Files (&ast;.html; &ast;.css) with NuGet in .NET Core
+# Add Content Files (&ast;.html; &ast;.css) with NuGet in .NET Core
 With NuGet it is possible to package and distribute content files similar to npm package manager. The following steps show how to add and consume a content folder.
 
 In the (&ast;.csproj) add the following lines of code. It adds MyContent folder to the class library package.
