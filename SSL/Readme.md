@@ -7,6 +7,9 @@ Install SSL from Namecheap with IIS on Azure
 ## Bit Length
 ![CertificateRequestDomainBitLength.png](CertificateRequestDomainBitLength.png)
 
+## Domain Control Validation
+Use DCV Method: Email
+
 ## Namecheap
 ![Namecheap.png](Namecheap.png)
 ![NamecheapStep2.png](NamecheapStep2.png)
