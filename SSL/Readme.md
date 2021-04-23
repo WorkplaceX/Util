@@ -20,8 +20,13 @@ Use DCV Method: Email
 ![Namecheap.png](Namecheap.png)
 ![NamecheapStep2.png](NamecheapStep2.png)
 
-## Complete Certificate Request (*.cer) or (*.crt) File to (*.pfx)
+## Complete Certificate Request
+Both file types (*.cer) or (*.crt) can be imported!
 ![](CompleteCertificateRequest.png)
+
+## Error
+Happens if certificate is already installed. Remove all certificates from IIS and try again.
+![](Error.png)
 
 ## Export to pxf file
 ![CerToPfx.png](CerToPfx.png)
