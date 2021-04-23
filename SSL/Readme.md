@@ -8,6 +8,9 @@ Install SSL from Namecheap with IIS on Azure
 ![CertificateRequestDomainBitLength.png](CertificateRequestDomainBitLength.png)
 
 ## Location of Certificate Request
+For debug only. Contains request private key
+
+Start > run > mmc > File > Add/Remove Snap-in... > Certificates > Computer account
 ![](CertificateRequest.png)
 
 ## Domain Control Validation
