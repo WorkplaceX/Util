@@ -17,7 +17,9 @@ Use DCV Method: Email
 ![Namecheap.png](Namecheap.png)
 ![NamecheapStep2.png](NamecheapStep2.png)
 
-## (*.cer) or (*.crt) File to (*.pfx)
-![](CompleteCertificateRequest)
+## Complete Certificate Request (*.cer) or (*.crt) File to (*.pfx)
+![](CompleteCertificateRequest.png)
+
+## Export to pxf file
 ![CerToPfx.png](CerToPfx.png)
 
