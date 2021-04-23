@@ -24,8 +24,10 @@ Use DCV Method: Email
 Both file types (*.cer) or (*.crt) can be imported!
 ![](CompleteCertificateRequest.png)
 
-## Error
+## Access Denied Error
+Access Denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))
 Happens if certificate is already installed. Remove all certificates from IIS and try again.
+
 ![](Error.png)
 
 ## Export to pxf file
