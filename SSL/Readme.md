@@ -33,3 +33,5 @@ Happens if certificate is already installed. Remove all certificates from IIS an
 ## Export to pxf file
 ![CerToPfx.png](CerToPfx.png)
 
+## Azure Add Custom Domain
+![](AzureAddCustomDomain.png)
