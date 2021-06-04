@@ -7,4 +7,6 @@ Enable nested virtualization. Run on physical Hype-V host:
 Set-VMProcessor -VMName "Windows 10 Development" -ExposeVirtualizationExtensions $true
 ```
 
+Increase memory
+
 See also: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization
