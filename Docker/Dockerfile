@@ -1,9 +1,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0
 # CMD echo 'Hello world from Dockerfile'
-WORKDIR /src
+WORKDIR /application
 COPY . .
 RUN dotnet build
 # CMD ls -R
 EXPOSE 8090
 ENV MY=MyLocal
-ENTRYPOINT ["dotnet", "bin/Debug/net5.0/ConsoleApp.dll"]
+# RUN dotnet run --project Application.Cli/Application.Cli.csproj
+ENTRYPOINT ["dotnet", "Application.Server/bin/Debug/net5.0/Application.Server.dll"]

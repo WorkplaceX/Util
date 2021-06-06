@@ -3,13 +3,12 @@ using System.Net;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace Application.Server
 {
     class Program
     {
         static async Task Main(string[] args)
         {
-
             // Host
             HttpListener listener = new HttpListener();
             var host = "localhost";
