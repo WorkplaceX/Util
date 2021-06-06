@@ -1,5 +1,17 @@
 # Docker
+Docker console app listening on port 8090 and MS-SQL Express Database.
 
+## Build
+```cmd
+docker build . --tag myapp
+```
+
+Console app with database:
+```cmd
+docker-compose up
+```
+
+## Setup
 Enable Docker Desktop WSL 2 Backend
 
 Enable nested virtualization. Run on physical Hype-V host:
