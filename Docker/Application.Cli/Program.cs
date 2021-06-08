@@ -11,7 +11,8 @@ namespace Application.Cli
         {
             try
             {
-                Console.WriteLine("Hello World! From Cli v1.10");
+                Console.WriteLine("Hello World! From Cli v1.12");
+
                 // Env
                 var target = EnvironmentVariableTarget.User;
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
@@ -22,8 +23,7 @@ namespace Application.Cli
                 Console.WriteLine("ENV (MY={0})", envText);
 
                 // Database create
-                var connectionString = "Data Source=host.docker.internal,1434;Initial Catalog=master;User Id=sa;Password=Your_password123;";
-
+                var connectionString = "Data Source=host.docker.internal,1433;Initial Catalog=master;User Id=sa;Password=Your_password123;";
                 Console.WriteLine("Create database Application");
                 SqlConnection connection = new SqlConnection(connectionString);
                 var command = new SqlCommand("CREATE DATABASE Application", connection);

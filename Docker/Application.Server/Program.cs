@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
@@ -9,6 +10,8 @@ namespace Application.Server
 {
     class Program
     {
+        public static string Version = "v1.09";
+
         static async Task Main(string[] args)
         {
             // Host
@@ -18,10 +21,10 @@ namespace Application.Server
             {
                 host = "*";
             }
-            var prefix = $"http://{ host }:8090/";
+            var prefix = $"http://{ host }:80/";
             listener.Prefixes.Add(prefix);
             listener.Start();
-            Console.WriteLine("Listen ({0}; {1})", prefix, "v1.03");
+            Console.WriteLine("Listen ({0}; {1}; {2})", prefix, GetLocalIPAddress(), Version);
 
             // Env
             var target = EnvironmentVariableTarget.User;
@@ -55,7 +58,7 @@ namespace Application.Server
                 string sqlText;
                 try
                 {
-                    var connection = new SqlConnection("Data Source=host.docker.internal,1434;Initial Catalog=master;User Id=sa;Password=Your_password123;Connection Timeout=1");
+                    var connection = new SqlConnection("Data Source=host.docker.internal,1433;Initial Catalog=master;User Id=sa;Password=Your_password123;Connection Timeout=1");
                     connection.Open();
                     SqlCommand command = new SqlCommand("SELECT GETUTCDATE()", connection);
                     sqlText = command.ExecuteScalar().ToString();
@@ -64,7 +67,7 @@ namespace Application.Server
                 {
                     sqlText = exception.ToString();
                 }
-                var responseText = string.Format("Hello from .NET Core! (Count={0}; VolumeText={1}; SQL={2};)", count, volumeText, sqlText);
+                var responseText = string.Format("Hello from .NET Core! (Count={0}; VolumeText={1}; SQL={2}; Version={3};)", count, volumeText, sqlText, Version);
                 var buffer = System.Text.Encoding.UTF8.GetBytes(responseText);
                 response.ContentLength64 = buffer.Length;
                 using (var output = response.OutputStream)
@@ -73,6 +76,19 @@ namespace Application.Server
                 }
                 response.Close();
             }
+        }
+
+        public static string GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
         }
     }
 }
