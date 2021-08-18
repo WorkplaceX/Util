@@ -12,3 +12,9 @@ Add-PoshGitToProfile
 Adds git state visualization
 
 ![PoshGit](PoshGit.png)
+
+# Powerline in Windows Terminal
+
+See also: https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
+
+See also: https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701 (Windows Terminal App)
