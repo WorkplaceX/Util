@@ -24,6 +24,11 @@ bcdboot F:\Windows
 
 Restart PC. Dual boot is shown. Remove it again by clicking delete in "System Configuration".
 
+Show dual boot
+```cmd
+bcdedit
+```
+
 # Install Windows with Windows PE
 ## Technician PC
 - Install Windows ADK
