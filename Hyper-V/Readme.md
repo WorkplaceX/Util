@@ -58,20 +58,42 @@ DISM /Apply-Image /Imagefile:D:\My\Win11\sources\install.wim /Index:6 /ApplyDir:
 Wpeutil Shutdown
 ```
 
-## ToDo
-D:\My\Win11\setup.exe
-DISM /Apply-Image /Imagefile:D:\My\Win11\sources\install.wim /Index:6 /ApplyDir:C:
-dism /Mount-image /Imagefile:D:\My\Win11\sources\install.wim /Index:6 /MountDir:C:\
+# Multi Boot
+Boot from USB into Windows Setup. Press SHIFT-F10
 
-create partition primary size=100
+```cmd
+diskpart
+select disk 0
+clean
+convert gpt
+
+create partition efi size=100
 select partition 1
-format fs=ntfs quick label=system
-active
+format fs=fat32 quick label=system
 
 create partition primary
 select partition 2
 format fs=ntfs quick label=windows
 assign letter=C
 
-C:\Windows\System32\bcdboot C:\Windows
-C:\Windows\System32\bcdboot C:\Windows /s S: /f ALL
+exit
+
+xcopy (*.iso)
+
+diskpart
+select vdisk file=M:\windows.vhdx
+attach vdisk
+
+exit
+
+bcdboot F:\Windows
+Wpeutil Reboot
+```
+ 
+
+## ToDo
+
+DISM /Apply-Image /Imagefile:D:\My\Win11\sources\install.wim /Index:6 /ApplyDir:C:
+
+dism /Mount-image /Imagefile:D:\My\Win11\sources\install.wim /Index:6 /MountDir:C:\
+
