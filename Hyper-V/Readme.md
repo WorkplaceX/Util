@@ -83,6 +83,9 @@ xcopy (*.iso)
 diskpart
 select vdisk file=M:\windows.vhdx
 attach vdisk
+list volume
+select volume 5
+assign letter=F
 
 exit
 
