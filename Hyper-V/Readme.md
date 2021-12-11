@@ -91,6 +91,9 @@ exit
 
 bcdboot F:\Windows
 Wpeutil Reboot
+
+bcdedit # list all boot enties
+bcdedit /delete {123} # delete boot entry
 ```
  
 
