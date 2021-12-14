@@ -93,7 +93,7 @@ bcdboot F:\Windows
 Wpeutil Reboot
 
 bcdedit # list all boot entries
-bcdedit /delete {123456} # delete boot entry
+bcdedit /delete "{123456}" # delete boot entry
 ```
  
 
