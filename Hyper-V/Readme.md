@@ -96,6 +96,27 @@ bcdedit # list all boot entries
 bcdedit /delete "{123456}" # delete boot entry
 ```
  
+# Win 11
+* Gen 2
+* 8192 MB
+* 64 GB
+* Security Enable Trusted Platform Module
+* 12 Processor
+* Checkpoint Disable
+* Shift-F10
+```cmd
+diskpart
+list disk
+select disk 0
+convert gpt
+exit
+```
+* Windows 11 Pro
+* Custom Install
+* Device name skip
+* Setup for School or work
+* Sign-in options
+* Setup for school or work
 
 ## ToDo
 
