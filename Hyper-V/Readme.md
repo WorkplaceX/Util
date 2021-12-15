@@ -115,7 +115,7 @@ exit
 * Custom Install
 * Device name skip
 * Sign-in options
-* Setup for school or work
+* Domain join instead
 * Office 2021 iso mount
 * Word > Review > Language > Language Preference > Proofing Language > Add a Language > Click Proofing Available
 * Settings > Time & Language > Language & Region > English > Language Options > Add a keyboard
