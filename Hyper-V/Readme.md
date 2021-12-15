@@ -114,9 +114,14 @@ exit
 * Windows 11 Pro
 * Custom Install
 * Device name skip
-* Setup for School or work
 * Sign-in options
 * Setup for school or work
+* Office 2021 iso mount
+* Word > Review > Language > Language Preference > Proofing Language > Add a Language > Click Proofing Available
+* Settings > Time & Language > Language & Region > English > Language Options > Add a keyboard
+* Settings > Time * Language > Language & Region > Region Format > Change Formats
+* Chrome
+* Zoom
 
 ## ToDo
 
