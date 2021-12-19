@@ -15,6 +15,7 @@ File: Microsoft.PowerShell_profile.ps1
 ```
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme powerlevel10k_rainbow # paradox
+Import-Module posh-git # Can be removed if used in combination with Import-Module oh-my-posh
 ```
 
 Install all fonts: https://www.nerdfonts.com/font-downloads (Download Caskaydia Cove Nerd Font)
