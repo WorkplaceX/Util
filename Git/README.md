@@ -1,6 +1,7 @@
 # Git Setup
 
-Install 
+Install oh-my-posh and posh-git. See also: https://docs.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
+
 ![](WindowsTerminal.png)
 
 ## Install oh-my-posh and posh-git
