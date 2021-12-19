@@ -14,7 +14,7 @@ notepad $PROFILE # Opens PowerShell_profile.ps1
 File: Microsoft.PowerShell_profile.ps1
 ```
 Import-Module oh-my-posh
-Set-PoshPrompt -Theme hotstick.minimal # paradox
+Set-PoshPrompt -Theme powerlevel10k_rainbow # paradox
 ```
 
 Install all fonts: https://www.nerdfonts.com/font-downloads (Download Caskaydia Cove Nerd Font)
