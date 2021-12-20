@@ -1,21 +1,34 @@
 # Git Setup
 
-Install oh-my-posh and posh-git. See also: https://docs.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
+Install posh-git and oh-my-posh. See also: https://docs.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
 
-![](WindowsTerminal.png)
+## Install posh-git
+![](posh-git.png)
+Enables git tab completion.
 
-## Install oh-my-posh and posh-git
+```
+Install-Module posh-git -Scope CurrentUser
+Import-Module posh-git
+notepad $PROFILE # Opens file PowerShell_profile.ps1
+```
+File: Microsoft.PowerShell_profile.ps1
+```
+Import-Module posh-git
+```
+
+## Install oh-my-posh
+![](oh-my-posh.png)
 ```
 Install-Module oh-my-posh -Scope CurrentUser
 Get-PoshThemes # Close and open terminal. Browse available themes
-notepad $PROFILE # Opens PowerShell_profile.ps1
+notepad $PROFILE # Opens file PowerShell_profile.ps1
 ```
 
 File: Microsoft.PowerShell_profile.ps1
 ```
+Import-Module posh-git # Can be omitted if oh-my-posh is used.
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme powerlevel10k_rainbow # paradox
-Import-Module posh-git # Can be removed if used in combination with Import-Module oh-my-posh
 ```
 
 Install all fonts: https://www.nerdfonts.com/font-downloads (Download Caskaydia Cove Nerd Font)
@@ -32,13 +45,6 @@ Change font on Windows Terminal settings (opens settings.json)
     "startingDirectory": "C:/Temp/Git/",
     "fontFace": "CaskaydiaCove NF"
 },
-```
-
-## Install posh-git
-Enables git tab completion
-```
-Install-Module posh-git -Scope CurrentUser
-Import-Module posh-git
 ```
 
 # GitHub Change Commit Author
