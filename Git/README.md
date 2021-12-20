@@ -3,7 +3,9 @@
 Install posh-git and oh-my-posh. See also: https://docs.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
 
 ## Install posh-git
-![](posh-git.png)
+
+![posh-git](posh-git.png)
+
 Enables git tab completion.
 
 ```
@@ -17,7 +19,9 @@ Import-Module posh-git
 ```
 
 ## Install oh-my-posh
+
 ![](oh-my-posh.png)
+
 ```
 Install-Module oh-my-posh -Scope CurrentUser
 Get-PoshThemes # Close and open terminal. Browse available themes
