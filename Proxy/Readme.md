@@ -6,7 +6,10 @@ If certificate errors occur use
 "C:\Program Files\Google\Chrome\Application\chrome.exe" --ignore-certificate-errors
 ```
 
-[!01 Proxy.png]()
-[!02 Proxy.png]()
-[!03 Proxy.png]()
-[!04 Proxy.png]()
+![a](01%20Proxy.png)
+
+![a](02%20Proxy.png)
+
+![a](03%20Proxy.png)
+
+![a](04%20Proxy.png)
